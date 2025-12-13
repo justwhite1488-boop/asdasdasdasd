@@ -2046,8 +2046,8 @@ newButton("Run Code",
 				elseif Remote:IsA("RemoteFunction") then
 					returnvalue = Remote:InvokeServer(unpack(selected.args))
 				end
-				setclipboard(v2s(returnvalue))
-				TextLabel.Text = ("Executed successfully!\n%s"):format(v2s(returnvalue))
+				setclipboard(v2s(returnvalue[3]))
+				TextLabel.Text = ("Executed successfully!\n%s"):format(v2s(returnvalue[3]))
 			end,function(err)
 				TextLabel.Text = ("Execution error!\n%s"):format(err)
 			end)
